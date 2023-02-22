@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    font-family: 'Lexend Deca';
+}
+main{
+    display: grid;
+    place-content: center;
+}
+.container{
+    margin-top: 25vh;
+    width: 900px;
+    height: 500px;
+    display: grid;
+    grid-template-areas: "sedans suvs luxury";
+    grid-template-columns: (3, 1fr);
+    border-radius: 15px;
+}
+.sedans{
+    grid-area: sedans;
+    grid-column-start: sedans;
+    grid-column-end: sedans;
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 0 0 10px;
+}
+.suvs{
+    grid-area: suvs;
+    grid-column-start: suvs;
+    grid-column-end: suvs;
+    display: grid;
+    background-color: hsl(184, 100%, 22%);
+}
+.luxury{
+    grid-area: suvs;
+    grid-column-start: luxury;
+    grid-column-end: luxury;
+    display: grid;
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+}
+.img{
+    justify-self: left;
+    align-self: self-start;
+    margin-top: 3rem;
+}
+.sedans, .suvs, .luxury{
+    max-width: 300px;
+    max-height: 500px;
+    place-items: center;
+    padding-left: 3rem;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+}
+.img img{
+    width: 60px;
+}
+.info{
+    align-items: center;
+    padding-right: 2.7rem;
+    width: 100%;
+    height: 100%;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.info h2{
+    color: hsl(0, 0%, 95%);
+    font-size: 2.5rem;
+    font-family: 'Big Shoulders Display';
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    text-transform: uppercase;
+}
+.button{
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+button{
+    width: 9.5rem;
+    height: 3rem;
+    border-radius: 50px;
+    font-size: 15px;
+    font-family: 'Lexend Deca';
+    border:1px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: transparent;
+    border: 1px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+}
+.S{
+    color: hsl(31, 77%, 52%);
+}
+.V{
+    color: hsl(184, 100%, 22%);
+}
+.L{
+    color: hsl(179, 100%, 13%);
+}
+@media (max-width: 950px){
+    .container{
+        width: 600px;
+    }
+    .sedans, .suvs, .luxury{
+        max-width: 200px;
+        max-height: 500px;
+        padding-left: 1rem;
+    }
+}
+@media (max-width: 700px){
+    main{
+        display: grid;
+        place-content: center;
+        place-items: center;
+    }
+    .sedans, .suvs, .luxury{
+        max-width: 300px;
+        max-height: 400px;
+        padding-left: 3rem;
+    }
+    .container{
+        margin-top: 5vh;
+        width: 300px;
+        height: 1200px;
+        display: grid;
+        grid-template-areas: "sedans" 
+                              "suvs" 
+                              "luxury";
+        grid-template-rows: (3, 1fr);
+    }
+    .sedans{
+        grid-row-start: sedans;
+        grid-row-end: sedans;
+        border-radius: 10px 10px 0 0;
+    }
+    .suvs{
+        grid-row-start: suvs;
+        grid-row-end: suvs; 
+    }
+    .luxury{
+        grid-row-start: luxury;
+        grid-row-end: luxury;
+        border-radius: 0 0 10px 10px;
+    }
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 2rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
