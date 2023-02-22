@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [3-column preview component](https://magical-crumble-6b03a0.netlify.app/)
 
 ## My process
 
